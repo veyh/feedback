@@ -96,7 +96,7 @@ impl MakeRequestId for StringRequestId {
         &mut self,
         _request: &Request<B>,
     ) -> Option<RequestId> {
-        let id = ulid::Ulid::new().to_string();
+        let id = nanoid::nanoid!();
 
         let Ok(value) = HeaderValue::from_str(&id) else {
             return None;
