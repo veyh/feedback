@@ -1,0 +1,22 @@
+[package]
+name = "feedback"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.86"
+axum = { version = "0.7.5", features = ["macros"] }
+axum-macros = "0.4.1"
+config = "0.15.11"
+json5 = "0.4.1"
+reqwest = "0.12.7"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.128"
+thiserror = "1.0.63"
+time = { version = "0.3.23", features = ["formatting", "local-offset", "macros", "parsing"] }
+tokio = { version = "1.28.2", features = ["full"] }
+tower = { version = "0.4.13", features = ["tracing"] }
+tower-http = { version = "0.5.2", features = ["trace", "request-id"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+ulid = "1.1.3"
